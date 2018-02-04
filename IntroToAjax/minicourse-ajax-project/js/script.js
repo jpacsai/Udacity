@@ -14,11 +14,12 @@ function loadData() {
     $nytElem.text("");
 
     // load streetview
+
     $("#form-container").append("<img class='bgimg' src='https://maps.googleapis.com/maps/api/streetview?size=600x400&location='/>");
     var $bgimg = $(".bgimg");
     $bgimg.attr("src", $bgimg.attr("src") + $street + ", " + $city);
 
-    // YOUR CODE GOES HERE!
+    // New York Times 
 
     var nytimesUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?&q=" + $city + "&sort=newest&apikey=04783637e8264c5eabd5e5a7b5b3a533"
     $.getJSON(nytimesUrl, function(data) {
@@ -34,6 +35,25 @@ function loadData() {
         $nytHeaderElem.text('New York Times articles could not be loaded');
   });
 
+    // Wikipedia
+    var wikiRequestTimeOut = setTimeout(function(){
+        $wikiElem.text('Failed to get Wikipedia resources');
+    }, 8000);
+    var wikiUrl = "http://en.wikipedia.org/w/api.php?action=opensearch&search=" + $city + "&format=json&callback=wikiCallback";
+    $.ajax( {
+        url: wikiUrl,
+        dataType: 'jsonp',
+        success: function(response) {
+            var articlelist = response[1];
+            for (let j = 0; j < articlelist.length; j++) {
+                articleCity = articlelist[j];
+                var url = "https://en.wikipedia.org/wiki/" + articleCity;
+                $wikiElem.append('<li><a href="' + url + '">' + articleCity + '</a></li>');
+            }
+           clearTimeout (wikiRequestTimeOut);
+        }
+    }); 
+    
     return false;
 };
 

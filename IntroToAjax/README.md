@@ -15,6 +15,6 @@ As part of the course, you’ll be building a web app that will help people lear
   - [x] Implement the NY Times API.
   
 - ### Lesson 3: AJAX and Your Projects
-  - What did you learn?
-  - How else can you apply AJAX to make speedy page loads?
+  - [x] What did you learn?
+  - [x] How else can you apply AJAX to make speedy page loads?
   - Customizing your sites.

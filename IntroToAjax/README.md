@@ -5,14 +5,14 @@
 As part of the course, you’ll be building a web app that will help people learn about a place where they want to move! Your app will query the Google Streetview, Wikipedia and New York Times APIs!"
 
 - ### Lesson 1: Introduction
-  - What is AJAX?
-  - Why use an API?
-  - How can you identify AJAX requests in existing websites?
+  - [x] What is AJAX?
+  - [x] Why use an API?
+  - [x] How can you identify AJAX requests in existing websites?
   
 - ### Lesson 2: Using APIs with AJAX
-  - Clone the Move Planner repository.
-  - Implement the Google Streetview API.
-  - Implement the NY Times API.
+  - [x] Clone the Move Planner repository.
+  - [x] Implement the Google Streetview API.
+  - [x] Implement the NY Times API.
   
 - ### Lesson 3: AJAX and Your Projects
   - What did you learn?

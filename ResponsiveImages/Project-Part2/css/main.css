@@ -1,3 +1,10 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
 article {
   margin: 0 auto;
   max-width: 50em;
@@ -15,4 +22,11 @@ h1 {
 
 img {
   max-width: 100%;
+}
+.social-container {
+  text-align: center;
+}
+
+.social {
+  margin: 10px;
 }

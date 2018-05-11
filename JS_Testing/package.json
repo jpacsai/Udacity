@@ -1,0 +1,17 @@
+{
+  "name": "js_testing",
+  "version": "1.0.0",
+  "description": "Practice testing your javascript applications using Jasmine!",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
